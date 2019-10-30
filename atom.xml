@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-28T17:17:44.952Z</updated>
+  <updated>2019-10-30T17:13:57.812Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="http://yoursite.com/2019/10/31/actual-hello-world/"/>
+    <id>http://yoursite.com/2019/10/31/actual-hello-world/</id>
+    <published>2019-10-30T17:11:00.000Z</published>
+    <updated>2019-10-30T17:13:57.812Z</updated>
+    
+    <content type="html"><![CDATA[<p>写在十月的最后一天<br>希望自己可以坚持这个习惯 毕竟是进步（加薪）的不充分不必要条件（笑）<br>然而还是要认真一点的<br>毕竟自己是微博194粉的大V<br>下一篇blog tech博主正式起航！</p><p>2019.10.31</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;写在十月的最后一天&lt;br&gt;希望自己可以坚持这个习惯 毕竟是进步（加薪）的不充分不必要条件（笑）&lt;br&gt;然而还是要认真一点的&lt;br&gt;毕竟自己是微博194粉的大V&lt;br&gt;下一篇blog tech博主正式起航！&lt;/p&gt;
+&lt;p&gt;2019.10.31&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="misc" scheme="http://yoursite.com/tags/misc/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

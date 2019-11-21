@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-20 01:09:30" itemprop="dateModified" datetime="2019-11-20T01:09:30+08:00">2019-11-20</time>
+                <time title="Modified: 2019-11-21 01:24:53" itemprop="dateModified" datetime="2019-11-21T01:24:53+08:00">2019-11-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -326,6 +326,18 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 <p>git push</p>
 <pre><code>* no arguments: push to the default remote branch 
 * `&lt;remote-name&gt; &lt;branch-name&gt;`
+</code></pre><p>git checkout </p>
+<pre><code>* `-b`: create a new branch and switch to it == git branch &lt;branch-name&gt; + git checkout &lt;branch-name&gt;
+</code></pre><p>git merge </p>
+<pre><code>* `&lt;branch-name&gt;`: merge another branch into current branch
+    - fast-forward: fast-forward simply means move the HEAD pointer forward 
+</code></pre><p>git branch </p>
+<pre><code>* no arguments: list all the local branches 
+* `-r`: list all the remote branches 
+* `-d &lt;branch-name&gt;`: delete branch 
+* `-D`: force delete branch (may lose changes)
+* `-v`: see the last commit of each local branch 
+* `--no-merged`: see the branches that contain unmerged commits 
 </code></pre><h2 id="Git-branching"><a href="#Git-branching" class="headerlink" title="Git branching"></a>Git branching</h2><p>According to Git Book </p>
 <blockquote>
 <p>Branching means you diverge from the main line of development and continue to do work without messing with that main line. </p>

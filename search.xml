@@ -52,12 +52,16 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 <pre><code>* `-- &lt;file-name&gt;`: discard changes that you made to the file &lt;== could be dangerous
 </code></pre><h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><p>git clone </p>
 <pre><code>* no arguments: clone all the content in remote and add remote branch implicitly
+* `-o &lt;remote-name&gt;`: default remote name is `origin`, can change to other names during clone process
 </code></pre><p>git remote </p>
 <pre><code>* no arguments: check upstreaming branch 
 * `-v`: show full url of upstreaming branch(push and pull)
 * `add &lt;short-name&gt; &lt;url&gt;`: add upstreaming branch explicitly 
 * `rename &lt;old-remote-name&gt; &lt;new-remote-name&gt;`
 * `remove &lt;short-name&gt;`: delete remote reference, all remote branches are also deleted 
+* `show origin`: remote branches
+</code></pre><p>git fetch </p>
+<pre><code>* `&lt;remote&gt;`: fetch all info from remote, for example, `git fetch origin`
 </code></pre><p>git pull == git fetch + git merge </p>
 <p>git push</p>
 <pre><code>* no arguments: push to the default remote branch 
@@ -71,7 +75,7 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 <pre><code>* no arguments: list all the local branches 
 * `-r`: list all the remote branches 
 * `-d &lt;branch-name&gt;`: delete branch 
-* `-D`: force delete branch (may lose changes)
+* `-D &lt;branch-name&gt;`: force delete branch (may lose changes)
 * `-v`: see the last commit of each local branch 
 * `--no-merged`: see the branches that contain unmerged commits 
 </code></pre><h2 id="Git-branching"><a href="#Git-branching" class="headerlink" title="Git branching"></a>Git branching</h2><p>According to Git Book </p>

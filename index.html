@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-24 20:18:41" itemprop="dateModified" datetime="2019-11-24T20:18:41+08:00">2019-11-24</time>
+                <time title="Modified: 2019-11-24 22:28:47" itemprop="dateModified" datetime="2019-11-24T22:28:47+08:00">2019-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -273,9 +273,13 @@
 <p>Since this blog does not go through sufficient polishing period, there might be some mistakes or some outdated content, feel free to contact me for any <code>bug</code> you find. Thanks in advance!</p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Git is a version control system used to facilitate the collaboration between multiple developers by using version control (everyone can controls their version to make sure all the features can be developed concurrently).  </p>
 <p>If you are not familiar with basic operations of Git, then probably you can search for <code>git book</code> to learn more about Git basics. This blog will focus on the tricks and problems during my usage of Git in my daily work. </p>
-<p>You may notice that several commands appear several times, this is the expected behavior since those commands will functions differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
-<h2 id="Annotation-rule"><a href="#Annotation-rule" class="headerlink" title="Annotation rule"></a>Annotation rule</h2><p>words in <code>&lt;&gt;</code> is variable name</p>
-<h2 id="git-commands"><a href="#git-commands" class="headerlink" title="git commands:"></a>git commands:</h2><h3 id="Simple-execution-normal-execution"><a href="#Simple-execution-normal-execution" class="headerlink" title="Simple execution (normal execution)"></a>Simple execution (normal execution)</h3><h4 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h4><h4 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h4><h4 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h4><ul>
+<p>You may notice that several commands appear several times in different sections, this is the expected behavior since those commands will function differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
+<h2 id="Memo-first"><a href="#Memo-first" class="headerlink" title="Memo first"></a>Memo first</h2><ul>
+<li>words in <code>&lt;&gt;</code> is variable name</li>
+<li><code>&lt;remote-name&gt;</code> for example: origin</li>
+<li><code>&lt;branch-name&gt;</code> / <code>&lt;local-branch-name&gt;</code> / <code>&lt;remote-branch-name&gt;</code>: master</li>
+</ul>
+<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><h3 id="Simple-execution-normal-execution"><a href="#Simple-execution-normal-execution" class="headerlink" title="Simple execution (normal execution)"></a>Simple execution (normal execution)</h3><h4 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h4><h4 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h4><h4 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h4><ul>
 <li><code>-a</code>: stage all the tracked files</li>
 <li><code>-m</code>: attach the commit message in commit command, no need to enter text editor to type commit msg</li>
 </ul>
@@ -338,23 +342,29 @@
 <li><code>show origin</code>: remote branches</li>
 </ul>
 <h4 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h4><ul>
+<li>no arguments: fetch all the changes on the server, this command will not modify anything in local, just be ready for you to operate</li>
 <li><code>&lt;remote-name&gt;</code>: fetch all info from remote, for example, <code>git fetch origin</code></li>
 </ul>
 <h4 id="git-pull-git-fetch-git-merge-from-upstreaming-branch"><a href="#git-pull-git-fetch-git-merge-from-upstreaming-branch" class="headerlink" title="git pull == git fetch + git merge from upstreaming branch"></a>git pull == git fetch + git merge from upstreaming branch</h4><h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h4><ul>
 <li>no arguments: push to the default remote branch </li>
 <li><code>&lt;remote-name&gt; &lt;branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are the same</li>
 <li><code>&lt;remote-name&gt; &lt;local-branch-name&gt;:&lt;remote-branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are different </li>
+<li><code>&lt;remote-name&gt; --delete &lt;remote-branch-name&gt;</code>: delete remote branch, remove pointer from server</li>
 </ul>
 <h4 id="git-checkout-2"><a href="#git-checkout-2" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
 <li><code>-b &lt;local-branch-name&gt;</code>: create a new branch and switch to it == git branch <branch-name> + git checkout <branch-name></li>
 <li><code>-b &lt;local-branch-name&gt; &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: create a local branch that sync with remote branch <remote-branch-name></li>
 <li><code>--track &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: set up current local branch to track remote branch with branch name <remote-branch-name></li>
 </ul>
+<p><br><br><code>git merge</code> and <code>git rebase</code> are two ways to integrate changes from other branches or local to current branch while <code>rebase</code> maintains a cleaner history. However, it is dangerous to use <code>git rebase</code> blindly without fully understand the effect of this command. </p>
 <h4 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h4><ul>
 <li><code>&lt;branch-name&gt;</code>: merge another branch into current branch<ul>
-<li>fast-forward: fast-forward simply means move the HEAD pointer forward  </li>
+<li>fast-forward: fast-forward simply means move the HEAD pointer forward, Git regards it as a linear history, no diverging and merging required </li>
 </ul>
 </li>
+</ul>
+<h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><ul>
+<li><code>&lt;branch-name&gt;</code>: copy commits and merge another branch into current branch</li>
 </ul>
 <h4 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h4><ul>
 <li>no arguments: list all the local branches </li>
@@ -370,17 +380,19 @@
 <blockquote>
 <p>Branching means you diverge from the main line of development and continue to do work without messing with that main line. </p>
 </blockquote>
-<p>The statement from Git Book states the core concept of branching, which is to take care of personal development while still maintain the easy-to-merge connection with main line. </p>
+<p>The statement from Git Book states the core concept of branching, which is to take care of personal development while still maintain the easy-to-merge connection with main line. The core of <code>Git branching</code> is actually diverge and merge. To find a way to diverge and merge conveniently and lightly, Linus Trovalds use concept of pointers to make it work. </p>
 <p>When git communicate between local repo and remote repo(GitHub or Gitlab), there are two protocols that it can use. <code>https</code> and <code>ssh</code> </p>
 <p>alias of git</p>
-<h2 id="Git-implementation"><a href="#Git-implementation" class="headerlink" title="Git implementation:"></a>Git implementation:</h2><p>Git stores its data as a sequence of snapchats of the whole filesystem. It does not copy the whole files but stores the reference of each file whenever user commits something. So the whole git history is like a stream of snapshots. </p>
+<h2 id="Git-implementation"><a href="#Git-implementation" class="headerlink" title="Git implementation"></a>Git implementation</h2><p>Git stores its data as a sequence of snapchats of the whole filesystem. It does not copy the whole files but stores the reference of each file whenever user commits something. So the whole git history is like a stream of snapshots. </p>
 <p>There are three types of files in git file system, <code>commit</code>, <code>tree</code> and <code>blob</code>. <code>Branch</code> is actually a pointer to different commits and moving the HEAD of each branch is actually changing the position of pointer, which is relatively lightweight and convenient compared to other VCS. <code>branch</code> is a file that contains the 40 character SHA-1 checksum of the commit that it points to. </p>
-<p><code>fast-forward</code> is a concept that </p>
+<p><code>fast-forward</code> is a concept that applys when integrating changes. </p>
 <p>One more thing: Comparison of Gitlab and GitHub </p>
 <p>If you got any questions, feel free to contact me via any communication tools </p>
 <p>Reference: </p>
-<pre><code>1. https://git-scm.com/book/en/v2
-</code></pre>
+<ol>
+<li><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener">https://git-scm.com/book/en/v2</a></li>
+</ol>
+
       
     </div>
 

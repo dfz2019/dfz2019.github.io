@@ -17,74 +17,111 @@
 <li><code>-m</code>: attach the commit message in commit command, no need to enter text editor to type commit msg</li>
 </ul>
 <p>git rm</p>
-<pre><code>* no arguments: the file will go away and not tracked
-* `--cached`: still keep the file in hard drive but not have Git track 
-</code></pre><p>git mv: seldomly used<br>git checkout</p>
-<pre><code>* no arguments: switch to an existing branch
-* `-b`: switch to a new local branch with same file status of current branch 
-</code></pre><p>git tag </p>
-<pre><code>* `-a &lt;tag-name&gt; -m &lt;tagging-msg&gt;`: create a tag with tagging msg
-* `&lt;tag-name&gt;`: short command 
-</code></pre><p>git config</p>
-<pre><code>* `--global alias.&lt;alias-name&gt; &lt;command-name&gt;`: create alias for one command 
-For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `git last` to perform as `git log -1 HEAD`
-</code></pre><h3 id="Checking-status"><a href="#Checking-status" class="headerlink" title="Checking status"></a>Checking status</h3><p>This part is like GET request in HTTP perspective, it will not do any changes to the file status, it will only check status </p>
+<ul>
+<li>no arguments: the file will go away and not tracked</li>
+<li><code>--cached</code>: still keep the file in hard drive but not have Git track </li>
+</ul>
+<p>git mv: seldomly used<br>git checkout</p>
+<ul>
+<li>no arguments: switch to an existing branch</li>
+<li><code>-b</code>: switch to a new local branch with same file status of current branch </li>
+</ul>
+<p>git tag </p>
+<ul>
+<li><code>-a &lt;tag-name&gt; -m &lt;tagging-msg&gt;</code>: create a tag with tagging msg</li>
+<li><code>&lt;tag-name&gt;</code>: short command </li>
+</ul>
+<p>git config</p>
+<ul>
+<li><code>--global alias.&lt;alias-name&gt; &lt;command-name&gt;</code>: create alias for one command<br>  For example, <code>$ git config --global alias.last &#39;log -1 HEAD&#39;</code> will set <code>git last</code> to perform as <code>git log -1 HEAD</code></li>
+</ul>
+<h3 id="Checking-status"><a href="#Checking-status" class="headerlink" title="Checking status"></a>Checking status</h3><p>This part is like GET request in HTTP perspective, it will not do any changes to the file status, it will only check status </p>
 <p>git status<br>git diff </p>
-<pre><code>* no arguments: see changes not yet staged
-* `--staged` / `--cached`: staged changes that will go into last commit 
-</code></pre><p>git log</p>
-<pre><code>* no arguments: display history only with commit msg and hash in reverse chronological order 
-* `--graph`: display branch and merge history in graph (tree)
-* `--patch / -p`: display history with file change summary
-* `-{number}`: display `number` logs
-* `--stat`: display history with brief summary
-* `--pretty={format}`: pre built-in format or customized format defined by us 
-</code></pre><p>git tag </p>
-<pre><code>* no arguments: list specific points in a repo&#39;s history 
-* `-l &lt;tag-sub-name&gt;`: filter according to tag name 
-</code></pre><p>git show </p>
-<pre><code>* `&lt;tag-name&gt;`: show tag with commits 
-</code></pre><h3 id="Error-handling-undo-after-abnormal-execution"><a href="#Error-handling-undo-after-abnormal-execution" class="headerlink" title="Error handling (undo after abnormal execution)"></a>Error handling (undo after abnormal execution)</h3><h4 id="When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again"><a href="#When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again" class="headerlink" title="When executing such commands, be careful since not all the undo operations can be undoed again"></a>When executing such commands, be careful since not all the undo operations can be undoed again</h4><p>It is quite annoying that sometimes you do the wrong operation and your local development branch becomes messy. Even worse you changes have been pushed to remote branch. </p>
+<ul>
+<li>no arguments: see changes not yet staged</li>
+<li><code>--staged</code> / <code>--cached</code>: staged changes that will go into last commit </li>
+</ul>
+<p>git log</p>
+<ul>
+<li>no arguments: display history only with commit msg and hash in reverse chronological order </li>
+<li><code>--graph</code>: display branch and merge history in graph (tree)</li>
+<li><code>--patch / -p</code>: display history with file change summary</li>
+<li><code>-{number}</code>: display <code>number</code> logs</li>
+<li><code>--stat</code>: display history with brief summary</li>
+<li><code>--pretty={format}</code>: pre built-in format or customized format defined by us </li>
+</ul>
+<p>git tag </p>
+<ul>
+<li>no arguments: list specific points in a repo’s history </li>
+<li><code>-l &lt;tag-sub-name&gt;</code>: filter according to tag name </li>
+</ul>
+<p>git show </p>
+<ul>
+<li><code>&lt;tag-name&gt;</code>: show tag with commits </li>
+</ul>
+<h3 id="Error-handling-undo-after-abnormal-execution"><a href="#Error-handling-undo-after-abnormal-execution" class="headerlink" title="Error handling (undo after abnormal execution)"></a>Error handling (undo after abnormal execution)</h3><h4 id="When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again"><a href="#When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again" class="headerlink" title="When executing such commands, be careful since not all the undo operations can be undoed again"></a>When executing such commands, be careful since not all the undo operations can be undoed again</h4><p>It is quite annoying that sometimes you do the wrong operation and your local development branch becomes messy. Even worse you changes have been pushed to remote branch. </p>
 <p>git commit</p>
-<pre><code>* `--amend`: undo the last commit, can add forgotten file or modify commit message 
-</code></pre><p>git reset (this could be a dangerous command with some arguments like <code>--hard</code> since you probably lose your work)</p>
-<pre><code>* `HEAD &lt;file-name&gt;`: unstage a staged file 
-* 
-</code></pre><p>git checkout </p>
-<pre><code>* `-- &lt;file-name&gt; / &lt;file-name&gt;`: discard changes that you made to the file &lt;== could be dangerous
-</code></pre><h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><p>git clone </p>
-<pre><code>* no arguments: clone all the content in remote and add remote branch implicitly
-* `-o &lt;remote-name&gt;`: default remote name is `origin`, can change to other names during clone process
-</code></pre><p>git remote </p>
-<pre><code>* no arguments: check upstreaming branch 
-* `-v`: show full url of upstreaming branch(push and pull)
-* `add &lt;short-name&gt; &lt;url&gt;`: add upstreaming branch explicitly 
-* `rename &lt;old-remote-name&gt; &lt;new-remote-name&gt;`
-* `remove &lt;short-name&gt;`: delete remote reference, all remote branches are also deleted 
-* `show origin`: remote branches
-</code></pre><p>git fetch </p>
-<pre><code>* `&lt;remote-name&gt;`: fetch all info from remote, for example, `git fetch origin`
-</code></pre><p>git pull == git fetch + git merge from upstreaming branch </p>
+<ul>
+<li><code>--amend</code>: undo the last commit, can add forgotten file or modify commit message </li>
+</ul>
+<p>git reset (this could be a dangerous command with some arguments like <code>--hard</code> since you probably lose your work)</p>
+<ul>
+<li><code>HEAD &lt;file-name&gt;</code>: unstage a staged file </li>
+<li></li>
+</ul>
+<p>git checkout </p>
+<ul>
+<li><code>-- &lt;file-name&gt; / &lt;file-name&gt;</code>: discard changes that you made to the file &lt;== could be dangerous</li>
+</ul>
+<h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><p>git clone </p>
+<ul>
+<li>no arguments: clone all the content in remote and add remote branch implicitly</li>
+<li><code>-o &lt;remote-name&gt;</code>: default remote name is <code>origin</code>, can change to other names during clone process</li>
+</ul>
+<p>git remote </p>
+<ul>
+<li>no arguments: check upstreaming branch </li>
+<li><code>-v</code>: show full url of upstreaming branch(push and pull)</li>
+<li><code>add &lt;short-name&gt; &lt;url&gt;</code>: add upstreaming branch explicitly </li>
+<li><code>rename &lt;old-remote-name&gt; &lt;new-remote-name&gt;</code></li>
+<li><code>remove &lt;short-name&gt;</code>: delete remote reference, all remote branches are also deleted </li>
+<li><code>show origin</code>: remote branches</li>
+</ul>
+<p>git fetch </p>
+<ul>
+<li><code>&lt;remote-name&gt;</code>: fetch all info from remote, for example, <code>git fetch origin</code></li>
+</ul>
+<p>git pull == git fetch + git merge from upstreaming branch </p>
 <p>git push</p>
-<pre><code>* no arguments: push to the default remote branch 
-* `&lt;remote-name&gt; &lt;branch-name&gt;`: push to remote branch if local branch name and remote branch name are the same
-* `&lt;remote-name&gt; &lt;local-branch-name&gt;:&lt;remote-branch-name&gt;`: push to remote branch if local branch name and remote branch name are different 
-</code></pre><p>git checkout </p>
-<pre><code>* `-b &lt;local-branch-name&gt;`: create a new branch and switch to it == git branch &lt;branch-name&gt; + git checkout &lt;branch-name&gt;
-* `-b &lt;local-branch-name&gt; &lt;remote-name&gt;/&lt;remote-branch-name&gt;`: create a local branch that sync with remote branch &lt;remote-branch-name&gt;
-* `--track &lt;remote-name&gt;/&lt;remote-branch-name&gt;`: set up current local branch to track remote branch with branch name &lt;remote-branch-name&gt;
-</code></pre><p>git merge </p>
-<pre><code>* `&lt;branch-name&gt;`: merge another branch into current branch
-    - fast-forward: fast-forward simply means move the HEAD pointer forward  
-</code></pre><p>git branch </p>
-<pre><code>* no arguments: list all the local branches 
-* `-r`: list all the remote branches 
-* `-d &lt;branch-name&gt;`: delete branch 
-* `-D &lt;branch-name&gt;`: force delete branch (may lose changes)
-* `-v`: see the last commit of each local branch 
-* `--no-merged`: see the branches that contain unmerged commits 
-* `-u / --set-upsteam-to`: set upsteam branch 
-</code></pre><h2 id="Git-branching"><a href="#Git-branching" class="headerlink" title="Git branching"></a>Git branching</h2><p>According to Git Book </p>
+<ul>
+<li>no arguments: push to the default remote branch </li>
+<li><code>&lt;remote-name&gt; &lt;branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are the same</li>
+<li><code>&lt;remote-name&gt; &lt;local-branch-name&gt;:&lt;remote-branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are different </li>
+</ul>
+<p>git checkout </p>
+<ul>
+<li><code>-b &lt;local-branch-name&gt;</code>: create a new branch and switch to it == git branch <branch-name> + git checkout <branch-name></li>
+<li><code>-b &lt;local-branch-name&gt; &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: create a local branch that sync with remote branch <remote-branch-name></li>
+<li><code>--track &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: set up current local branch to track remote branch with branch name <remote-branch-name></li>
+</ul>
+<p>git merge </p>
+<ul>
+<li><code>&lt;branch-name&gt;</code>: merge another branch into current branch<ul>
+<li>fast-forward: fast-forward simply means move the HEAD pointer forward  </li>
+</ul>
+</li>
+</ul>
+<p>git branch </p>
+<ul>
+<li>no arguments: list all the local branches </li>
+<li><code>-r</code>: list all the remote branches </li>
+<li><code>-d &lt;branch-name&gt;</code>: delete branch </li>
+<li><code>-D &lt;branch-name&gt;</code>: force delete branch (may lose changes)</li>
+<li><code>-v</code>: see the last commit of each local branch </li>
+<li><code>--no-merged</code>: see the branches that contain unmerged commits </li>
+<li><code>-u / --set-upsteam-to</code>: set upsteam branch </li>
+</ul>
+<h2 id="Git-branching"><a href="#Git-branching" class="headerlink" title="Git branching"></a>Git branching</h2><p>According to Git Book </p>
 <blockquote>
 <p>Branching means you diverge from the main line of development and continue to do work without messing with that main line. </p>
 </blockquote>

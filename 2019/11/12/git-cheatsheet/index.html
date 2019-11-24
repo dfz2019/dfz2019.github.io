@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Dingfan&#39;s blog">
 <meta property="og:description" content="工欲善其事，必先利其器。  Since this blog does not go through sufficient polishing period, there might be some mistakes or some outdated content, feel free to contact me for any bug you find. Thanks in advance!">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-22T18:45:46.506Z">
+<meta property="og:updated_time" content="2019-11-24T11:49:35.785Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/12/git-cheatsheet/">
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-23 02:45:46" itemprop="dateModified" datetime="2019-11-23T02:45:46+08:00">2019-11-23</time>
+                <time title="Modified: 2019-11-24 19:49:35" itemprop="dateModified" datetime="2019-11-24T19:49:35+08:00">2019-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -276,8 +276,8 @@
 <p>You may notice that several commands appear several times, this is the expected behavior since those commands will functions differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
 <h2 id="Annotation-rule"><a href="#Annotation-rule" class="headerlink" title="Annotation rule"></a>Annotation rule</h2><p>words in <code>&lt;&gt;</code> is variable name</p>
 <h2 id="git-commands"><a href="#git-commands" class="headerlink" title="git commands:"></a>git commands:</h2><h3 id="Simple-execution-normal-execution"><a href="#Simple-execution-normal-execution" class="headerlink" title="Simple execution (normal execution)"></a>Simple execution (normal execution)</h3><p>git init<br>git add<br>git commit </p>
-<pre><code>* `-a`: stage all the tracked files
-* `-m`: attach the commit message in commit command, no need to enter text editor to type commit msg
+<pre><code>- `-a`: stage all the tracked files
+- `-m`: attach the commit message in commit command, no need to enter text editor to type commit msg
 </code></pre><p>git rm</p>
 <pre><code>* no arguments: the file will go away and not tracked
 * `--cached`: still keep the file in hard drive but not have Git track 
@@ -313,7 +313,7 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 <pre><code>* `HEAD &lt;file-name&gt;`: unstage a staged file 
 * 
 </code></pre><p>git checkout </p>
-<pre><code>* `-- &lt;file-name&gt;`: discard changes that you made to the file &lt;== could be dangerous
+<pre><code>* `-- &lt;file-name&gt; / &lt;file-name&gt;`: discard changes that you made to the file &lt;== could be dangerous
 </code></pre><h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><p>git clone </p>
 <pre><code>* no arguments: clone all the content in remote and add remote branch implicitly
 * `-o &lt;remote-name&gt;`: default remote name is `origin`, can change to other names during clone process
@@ -325,13 +325,15 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 * `remove &lt;short-name&gt;`: delete remote reference, all remote branches are also deleted 
 * `show origin`: remote branches
 </code></pre><p>git fetch </p>
-<pre><code>* `&lt;remote&gt;`: fetch all info from remote, for example, `git fetch origin`
-</code></pre><p>git pull == git fetch + git merge </p>
+<pre><code>* `&lt;remote-name&gt;`: fetch all info from remote, for example, `git fetch origin`
+</code></pre><p>git pull == git fetch + git merge from upstreaming branch </p>
 <p>git push</p>
 <pre><code>* no arguments: push to the default remote branch 
-* `&lt;remote-name&gt; &lt;branch-name&gt;`
+* `&lt;remote-name&gt; &lt;branch-name&gt;`: push to remote branch if local branch name and remote branch name are the same
+* `&lt;remote-name&gt; &lt;local-branch-name&gt;:&lt;remote-branch-name&gt;`: push to remote branch if local branch name and remote branch name are different 
 </code></pre><p>git checkout </p>
-<pre><code>* `-b`: create a new branch and switch to it == git branch &lt;branch-name&gt; + git checkout &lt;branch-name&gt;
+<pre><code>* `-b &lt;local-branch-name&gt;`: create a new branch and switch to it == git branch &lt;branch-name&gt; + git checkout &lt;branch-name&gt;
+* `-b &lt;local-branch-name&gt; &lt;remote-name&gt;/&lt;remote-branch-name&gt;`: create a local branch that sync with remote branch &lt;remote-branch-name&gt;
 </code></pre><p>git merge </p>
 <pre><code>* `&lt;branch-name&gt;`: merge another branch into current branch
     - fast-forward: fast-forward simply means move the HEAD pointer forward 

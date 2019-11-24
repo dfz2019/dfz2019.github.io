@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Dingfan&#39;s blog">
 <meta property="og:description" content="工欲善其事，必先利其器。  Since this blog does not go through sufficient polishing period, there might be some mistakes or some outdated content, feel free to contact me for any bug you find. Thanks in advance!">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-24T12:01:14.721Z">
+<meta property="og:updated_time" content="2019-11-24T12:07:30.592Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/12/git-cheatsheet/">
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-24 20:01:14" itemprop="dateModified" datetime="2019-11-24T20:01:14+08:00">2019-11-24</time>
+                <time title="Modified: 2019-11-24 20:07:30" itemprop="dateModified" datetime="2019-11-24T20:07:30+08:00">2019-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -275,7 +275,11 @@
 <p>If you are not familiar with basic operations of Git, then probably you can search for <code>git book</code> to learn more about Git basics. This blog will focus on the tricks and problems during my usage of Git in my daily work. </p>
 <p>You may notice that several commands appear several times, this is the expected behavior since those commands will functions differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
 <h2 id="Annotation-rule"><a href="#Annotation-rule" class="headerlink" title="Annotation rule"></a>Annotation rule</h2><p>words in <code>&lt;&gt;</code> is variable name</p>
-<h2 id="git-commands"><a href="#git-commands" class="headerlink" title="git commands:"></a>git commands:</h2><h3 id="Simple-execution-normal-execution"><a href="#Simple-execution-normal-execution" class="headerlink" title="Simple execution (normal execution)"></a>Simple execution (normal execution)</h3><p>git init<br>git add<br>git commit<br>    <code>-a</code>: stage all the tracked files<br>    <code>-m</code>: attach the commit message in commit command, no need to enter text editor to type commit msg</p>
+<h2 id="git-commands"><a href="#git-commands" class="headerlink" title="git commands:"></a>git commands:</h2><h3 id="Simple-execution-normal-execution"><a href="#Simple-execution-normal-execution" class="headerlink" title="Simple execution (normal execution)"></a>Simple execution (normal execution)</h3><p>git init<br>git add<br>git commit </p>
+<ul>
+<li><code>-a</code>: stage all the tracked files</li>
+<li><code>-m</code>: attach the commit message in commit command, no need to enter text editor to type commit msg</li>
+</ul>
 <p>git rm</p>
 <pre><code>* no arguments: the file will go away and not tracked
 * `--cached`: still keep the file in hard drive but not have Git track 
@@ -343,7 +347,7 @@ For example, `$ git config --global alias.last &#39;log -1 HEAD&#39;` will set `
 * `-D &lt;branch-name&gt;`: force delete branch (may lose changes)
 * `-v`: see the last commit of each local branch 
 * `--no-merged`: see the branches that contain unmerged commits 
-* 
+* `-u / --set-upsteam-to`: set upsteam branch 
 </code></pre><h2 id="Git-branching"><a href="#Git-branching" class="headerlink" title="Git branching"></a>Git branching</h2><p>According to Git Book </p>
 <blockquote>
 <p>Branching means you diverge from the main line of development and continue to do work without messing with that main line. </p>

@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-28 00:40:31" itemprop="dateModified" datetime="2019-11-28T00:40:31+08:00">2019-11-28</time>
+                <time title="Modified: 2019-11-28 01:04:28" itemprop="dateModified" datetime="2019-11-28T01:04:28+08:00">2019-11-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -403,7 +403,8 @@
 <h2 id="Git-implementation"><a href="#Git-implementation" class="headerlink" title="Git implementation"></a>Git implementation</h2><p>Git stores its data as a sequence of snapchats of the whole filesystem. It does not copy the whole files but stores the reference of each file whenever user commits something. So the whole git history is like a stream of snapshots. </p>
 <p>There are three types of files in git file system, <code>commit</code>, <code>tree</code> and <code>blob</code>. <code>Branch</code> is actually a pointer to different commits and moving the HEAD of each branch is actually changing the position of pointer, which is relatively lightweight and convenient compared to other VCS. <code>branch</code> is a file that contains the 40 character SHA-1 checksum of the commit that it points to. </p>
 <p><code>fast-forward</code> is a concept that applys when integrating changes. Simply treat it as linear merge, do diverging between branches. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># When git communicate between local repo and remote repo(GitHub or Gitlab), there are two protocols that it can use. `https` and `ssh`.</span><br></pre></td></tr></table></figure>
+<p>// When git communicate between local repo and remote repo(GitHub or Gitlab), there are two protocols that it can use. <code>https</code> and <code>ssh</code>. </p>
+<p>There are 4 protocols used to transfer data. <code>Local</code>, <code>http</code>, <code>ssh</code> and <code>Git</code>. </p>
 <p>One more thing: Comparison of Gitlab and GitHub </p>
 <p>If you got any questions, feel free to contact me via any communication tools </p>
 <p>Reference: </p>

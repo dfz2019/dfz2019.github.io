@@ -3,15 +3,18 @@
   <entry>
     <title>Git Cheatsheet</title>
     <url>/2019/11/12/git-cheatsheet/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<h3 id="首篇blog献给我最最最喜欢的小梁！"><a href="#首篇blog献给我最最最喜欢的小梁！" class="headerlink" title="首篇blog献给我最最最喜欢的小梁！"></a>首篇blog献给我最最最喜欢的小梁！</h3><p>Without her continuous support I would not achive anything. (Although I haven’t achive any accomplishment yet, sigh)</p>
+<p><br></p>
+<blockquote>
 <p>工欲善其事，必先利其器。</p>
 </blockquote>
-<p>Since this blog does not go through sufficient polishing period, there might be some mistakes or some outdated content, feel free to contact me for any <code>bug</code> you find. Thanks in advance!</p>
+<p>Since this blog does not go through sufficient polishing period, there might be some mistakes or some outdated content, feel free to contact me for any <code>bug</code> you find. Thanks in advance! Another issue is that some naming convention is not quite consistent throughout this blog because this is my first time to write English blog. </p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Git is a version control system used to facilitate the collaboration between multiple developers by using version control (everyone can controls their version to make sure all the features can be developed concurrently).  </p>
 <p>If you are not familiar with basic operations of Git, then probably you can search for <code>git book</code> to learn more about Git basics. This blog will focus on the tricks and problems during my usage of Git in my daily work. </p>
 <p>You may notice that several commands appear several times in different sections, this is the expected behavior since those commands will function differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
 <h2 id="Memo-first"><a href="#Memo-first" class="headerlink" title="Memo first"></a>Memo first</h2><ul>
 <li>words in <code>&lt;&gt;</code> is variable name</li>
+<li>phrase in <code>this format</code> and start with <code>git</code> are command and its parameters </li>
 <li><code>&lt;remote-name&gt;</code> for example: origin</li>
 <li><code>&lt;branch-name&gt;</code> / <code>&lt;local-branch-name&gt;</code> / <code>&lt;remote-branch-name&gt;</code>: master</li>
 </ul>
@@ -33,6 +36,7 @@
 </ul>
 <h4 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h4><ul>
 <li><code>--global alias.&lt;alias-name&gt; &lt;command-name&gt;</code>: create alias for one command<br>  For example, <code>$ git config --global alias.last &#39;log -1 HEAD&#39;</code> will set <code>git last</code> to perform as <code>git log -1 HEAD</code></li>
+<li><code>--global pull.rebase true / false</code>: </li>
 </ul>
 <h3 id="Checking-local-status"><a href="#Checking-local-status" class="headerlink" title="Checking local status"></a>Checking local status</h3><p>This part is like GET request in HTTP perspective, it will not do any changes to the file status, it will only check status </p>
 <h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h4><h4 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h4><ul>
@@ -54,7 +58,7 @@
 <h4 id="git-show"><a href="#git-show" class="headerlink" title="git show"></a>git show</h4><ul>
 <li><code>&lt;tag-name&gt;</code>: show tag with commits </li>
 </ul>
-<h3 id="Error-handling-undo-after-abnormal-execution"><a href="#Error-handling-undo-after-abnormal-execution" class="headerlink" title="Error handling (undo after abnormal execution)"></a>Error handling (undo after abnormal execution)</h3><h4 id="When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again"><a href="#When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again" class="headerlink" title="When executing such commands, be careful since not all the undo operations can be undoed again"></a>When executing such commands, be careful since not all the undo operations can be undoed again</h4><p>It is quite annoying that sometimes you do the wrong operation and your local development branch becomes messy. Even worse you changes have been pushed to remote branch. </p>
+<h3 id="Error-handling-undo-after-abnormal-execution"><a href="#Error-handling-undo-after-abnormal-execution" class="headerlink" title="Error handling (undo after abnormal execution)"></a>Error handling (undo after abnormal execution)</h3><h4 id="When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again"><a href="#When-executing-such-commands-be-careful-since-not-all-the-undo-operations-can-be-undoed-again" class="headerlink" title="When executing such commands, be careful since not all the undo operations can be undoed again"></a>When executing such commands, be careful since not all the undo operations can be undoed again</h4><p>It is quite annoying that sometimes you do the wrong operation and your local development branch becomes messy. Even worse your changes have been pushed to remote branch. The worst is your changes have been merged into mainline (If you wanna change something, it may pollute others’ work). </p>
 <h4 id="git-commit-1"><a href="#git-commit-1" class="headerlink" title="git commit"></a>git commit</h4><ul>
 <li><code>--amend</code>: undo the last commit, can add forgotten file or modify commit message </li>
 </ul>
@@ -62,7 +66,7 @@
 <li><code>HEAD &lt;file-name&gt;</code>: unstage a staged file </li>
 <li></li>
 </ul>
-<h4 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
+<h4 id="git-revert"><a href="#git-revert" class="headerlink" title="git revert"></a>git revert</h4><h4 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
 <li><code>-- &lt;file-name&gt; / &lt;file-name&gt;</code>: discard changes that you made to the file &lt;== could be dangerous</li>
 </ul>
 <h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><h4 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h4><ul>
@@ -81,32 +85,46 @@
 <li>no arguments: fetch all the changes on the server, this command will not modify anything in local, just be ready for you to operate</li>
 <li><code>&lt;remote-name&gt;</code>: fetch all info from remote, for example, <code>git fetch origin</code></li>
 </ul>
-<h4 id="git-pull-git-fetch-git-merge-from-upstreaming-branch"><a href="#git-pull-git-fetch-git-merge-from-upstreaming-branch" class="headerlink" title="git pull == git fetch + git merge from upstreaming branch"></a>git pull == git fetch + git merge from upstreaming branch</h4><h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h4><ul>
+<h4 id="git-pull-git-fetch-git-merge-from-upstreaming-branch"><a href="#git-pull-git-fetch-git-merge-from-upstreaming-branch" class="headerlink" title="git pull == git fetch + git merge from upstreaming branch"></a>git pull == git fetch + git merge from upstreaming branch</h4><ul>
+<li>no arguments: fetch commits in upstreaming branch and merge into local branch </li>
+<li><code>--rebase</code>: == <code>git fetch</code> + <code>git rebase</code> in this case </li>
+</ul>
+<h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h4><ul>
 <li>no arguments: push to the default remote branch </li>
 <li><code>&lt;remote-name&gt; &lt;branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are the same</li>
 <li><code>&lt;remote-name&gt; &lt;local-branch-name&gt;:&lt;remote-branch-name&gt;</code>: push to remote branch if local branch name and remote branch name are different </li>
 <li><code>&lt;remote-name&gt; --delete &lt;remote-branch-name&gt;</code>: delete remote branch, remove pointer from server</li>
+<li><code>--force</code>: rewrite upstreaming branch history according to local history</li>
 </ul>
 <h4 id="git-checkout-2"><a href="#git-checkout-2" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
 <li><code>-b &lt;local-branch-name&gt;</code>: create a new branch and switch to it == git branch <branch-name> + git checkout <branch-name></li>
 <li><code>-b &lt;local-branch-name&gt; &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: create a local branch that sync with remote branch <remote-branch-name></li>
 <li><code>--track &lt;remote-name&gt;/&lt;remote-branch-name&gt;</code>: set up current local branch to track remote branch with branch name <remote-branch-name></li>
 </ul>
-<p><br><br><code>git merge</code> and <code>git rebase</code> are two ways to integrate changes from other branches or local to current branch while <code>rebase</code> maintains a cleaner history. However, it is dangerous to use <code>git rebase</code> blindly without fully understand the effect of this command. </p>
+<p><br><br><code>git merge</code> and <code>git rebase</code> are two ways to integrate changes from other branches or local to current branch while <code>rebase</code> maintains a cleaner history. However, it is dangerous to use <code>git rebase</code> blindly without fully understand the effect of this command.<br>According to Git book, </p>
+<blockquote>
+<p>Do not rebase commits that exist outside your repository and people may have based work on them.</p>
+</blockquote>
+<p>Rebasing changes the commit history and if other people already merged the older version of commit history and you push newer version, it will become messy. </p>
 <h4 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h4><ul>
 <li><code>&lt;branch-name&gt;</code>: merge another branch into current branch<ul>
 <li>fast-forward: fast-forward simply means move the HEAD pointer forward, Git regards it as a linear history, no diverging and merging required </li>
 </ul>
 </li>
+<li><code>--no-ff &lt;branch-name&gt;</code>: merge without fast forward, will always generate a merge commit even if it is fast forward merge </li>
 </ul>
 <h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><ul>
-<li><code>&lt;branch-name&gt;</code>: copy commits and merge another branch into current branch</li>
+<li><code>&lt;branch-name&gt;</code>: copy commits and merge another branch into current branch, can rebase on top of force-pushed rebase work</li>
+<li><code>&lt;branch-a-name&gt; &lt;branch-b-name&gt;</code>: make <code>branch-b</code> replay changes in <code>branch-a</code> </li>
+<li><code>--onto &lt;branch-a-name&gt; &lt;branch-b-name&gt; &lt;branch-c-name&gt;</code>: take commits from <code>branch-c</code> diverged from <code>branch-b</code> and apply direcly to <code>branch-a</code> (a bit tricky, I don’t like this command)</li>
 </ul>
+<p>Usually public branches use <code>git merge</code> while personal branch use <code>git rebase</code>. Rebase will make commit history cleaner by rewriting the whole commit history. However, it will pollute other people’s history if you rebase + push. merge will leave a merge commit in the history. </p>
+<p>For public branch that someone already rebased his/her commits into it and we already pulled before, use <code>git rebase</code> to merge remote branch code into your branch rather than <code>git merge</code> to avoid duplicate commits. </p>
 <h4 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h4><ul>
 <li>no arguments: list all the local branches </li>
 <li><code>-r</code>: list all the remote branches </li>
 <li><code>-d &lt;branch-name&gt;</code>: delete branch </li>
-<li><code>-D &lt;branch-name&gt;</code>: force delete branch (may lose changes)</li>
+<li><code>-D &lt;branch-name&gt;</code>: force delete branch (may lose changes that haven’t commited into stable branches)</li>
 <li><code>-v</code>: see the last commit of each local branch </li>
 <li><code>-vv</code>: list all local branches with tracking branch and <code>head</code> pointer info</li>
 <li><code>--no-merged</code>: see the branches that contain unmerged commits </li>
@@ -117,11 +135,11 @@
 <p>Branching means you diverge from the main line of development and continue to do work without messing with that main line. </p>
 </blockquote>
 <p>The statement from Git Book states the core concept of branching, which is to take care of personal development while still maintain the easy-to-merge connection with main line. The core of <code>Git branching</code> is actually diverge and merge. To find a way to diverge and merge conveniently and lightly, Linus Trovalds use concept of pointers to make it work. </p>
-<p>When git communicate between local repo and remote repo(GitHub or Gitlab), there are two protocols that it can use. <code>https</code> and <code>ssh</code> </p>
 <p>alias of git</p>
 <h2 id="Git-implementation"><a href="#Git-implementation" class="headerlink" title="Git implementation"></a>Git implementation</h2><p>Git stores its data as a sequence of snapchats of the whole filesystem. It does not copy the whole files but stores the reference of each file whenever user commits something. So the whole git history is like a stream of snapshots. </p>
 <p>There are three types of files in git file system, <code>commit</code>, <code>tree</code> and <code>blob</code>. <code>Branch</code> is actually a pointer to different commits and moving the HEAD of each branch is actually changing the position of pointer, which is relatively lightweight and convenient compared to other VCS. <code>branch</code> is a file that contains the 40 character SHA-1 checksum of the commit that it points to. </p>
-<p><code>fast-forward</code> is a concept that applys when integrating changes. </p>
+<p><code>fast-forward</code> is a concept that applys when integrating changes. Simply treat it as linear merge, do diverging between branches. </p>
+<p>When git communicate between local repo and remote repo(GitHub or Gitlab), there are two protocols that it can use. <code>https</code> and <code>ssh</code>. </p>
 <p>One more thing: Comparison of Gitlab and GitHub </p>
 <p>If you got any questions, feel free to contact me via any communication tools </p>
 <p>Reference: </p>

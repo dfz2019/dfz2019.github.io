@@ -4,6 +4,7 @@
     <title>Intermediate Python</title>
     <url>/2019/11/30/intermediate-python/</url>
     <content><![CDATA[<p><img src="https://i.postimg.cc/vBzKnzhB/python-logo.png" alt="python-logo.png"></p>
+<p>As all known, there are two versions of Python, Python 2 and Python 3. One suggestion: learn python 3. </p>
 <p>Python is a versatile language that can support for multiple purposes. </p>
 <ol>
 <li>scripting </li>
@@ -16,17 +17,31 @@
 <ol>
 <li>Python basic </li>
 </ol>
-<p>general knowledge:<br>Python does minimum compile-time check, almost all the check is done in runtime check </p>
-<p>python encoding &amp; decoding </p>
-<p>regex introduction </p>
-<p>scripting track: requests + beautifulsoup + Pandas + Selenium(?)</p>
-<p>web development track: Django </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ol>
+<h2 id="general-knowledge"><a href="#general-knowledge" class="headerlink" title="general knowledge:"></a>general knowledge:</h2><p>Python does minimum compile-time check, almost all the check is done in runtime check </p>
+<p>python string is immutable, just like string in Java and C#. The reason that string type in Python is immutable is: </p>
+<ol>
+<li>it is safe to put as a dict key without deepcopy the content of string. If assign string to another variable then they do not point to the same object. </li>
+<li>it is threadsafe</li>
+<li>easy for programming, you can add mutable wrapper on immutable type but the reverse is difficult </li>
+</ol>
+<p>Every time we manipulate string, we actually construct new string with exactly the same value </p>
+<h3 id="python-encoding-amp-decoding"><a href="#python-encoding-amp-decoding" class="headerlink" title="python encoding &amp; decoding"></a>python encoding &amp; decoding</h3><p>converting between bytes and string, bytes to string ==&gt; decode, string to byte ==&gt; encode<br>To construct a python unicode string, add a prefix <code>u</code> in front of the string, like <code>u&#39;\xf1&#39;</code><br>If encode, then string becomes bytes with specific encoding method like <code>utf-8</code>. </p>
+<h3 id="python-list-tuple-dict-set"><a href="#python-list-tuple-dict-set" class="headerlink" title="python list, tuple, dict, set"></a>python list, tuple, dict, set</h3><h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p>list is passed by reference, use <code>=</code> does not copy the content of list, only copy the pointer to the object. <code>+</code> works as concatenation between lists. </p>
+<p>list comprehension is the most common pythonic implementation of <code>for</code> loop</p>
+<h3 id="regex-introduction"><a href="#regex-introduction" class="headerlink" title="regex introduction"></a>regex introduction</h3><h2 id="scripting-track-requests-beautifulsoup-Pandas-Selenium"><a href="#scripting-track-requests-beautifulsoup-Pandas-Selenium" class="headerlink" title="scripting track: requests + beautifulsoup + Pandas + Selenium(?)"></a>scripting track: requests + beautifulsoup + Pandas + Selenium(?)</h2><h2 id="web-development-track-Django"><a href="#web-development-track-Django" class="headerlink" title="web development track: Django"></a>web development track: Django</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ol>
 <li><a href="https://developers.google.com/edu/python/introduction" target="_blank" rel="noopener">Google Python Tutorials</a></li>
 <li><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a></li>
 <li><a href="https://docs.python.org/3/library/" target="_blank" rel="noopener">https://docs.python.org/3/library/</a></li>
+<li><a href="https://stackoverflow.com/questions/8680080/why-are-python-strings-immutable-best-practices-for-using-them" target="_blank" rel="noopener">https://stackoverflow.com/questions/8680080/why-are-python-strings-immutable-best-practices-for-using-them</a></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>programming-language</category>
+      </categories>
+      <tags>
+        <tag>programming-language</tag>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git Cheatsheet</title>
@@ -39,6 +54,12 @@
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Git is a version control system used to facilitate the collaboration between multiple developers by using version control (everyone can controls their version to make sure all the features can be developed concurrently).  </p>
 <p>If you are not familiar with basic operations of Git, then probably you can search for <code>git book</code> to learn more about Git basics. This blog will focus on the tricks and problems during my usage of Git in my daily work. </p>
 <p>You may notice that several commands appear several times in different sections, this is the expected behavior since those commands will function differently with different arguments. The <code>Git commands</code> part will introduce commands by functions, hence some commands might be diverged into different parts. </p>
+<p>I would like to There are three kinds of changes in local environment. </p>
+<ol>
+<li>changes in the staging area (changes to be committed in next commit) (added into <code>index</code>)</li>
+<li>changes not in the staging area but still tracked</li>
+<li>changes not tracked or ignored </li>
+</ol>
 <h2 id="Memo-first"><a href="#Memo-first" class="headerlink" title="Memo first"></a>Memo first</h2><ul>
 <li>words in <code>&lt;&gt;</code> is variable name</li>
 <li>phrase in <code>this format</code> and start with <code>git</code> are command and its parameters </li>
@@ -63,8 +84,19 @@
 </ul>
 <h4 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h4><ul>
 <li><code>--global alias.&lt;alias-name&gt; &lt;command-name&gt;</code>: create alias for one command<br>  For example, <code>$ git config --global alias.last &#39;log -1 HEAD&#39;</code> will set <code>git last</code> to perform as <code>git log -1 HEAD</code></li>
-<li><code>--global pull.rebase true / false</code>: </li>
+<li><code>--global pull.rebase true / false</code>: <code>true</code> will set the default pull method to <code>rebase</code> while <code>false</code> will set to <code>merge</code></li>
 </ul>
+<h4 id="git-clean"><a href="#git-clean" class="headerlink" title="git clean"></a>git clean</h4><ul>
+<li><code>-df</code>: remove all the files that are untracked</li>
+</ul>
+<h4 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h4><ul>
+<li>no arguments / <code>push</code>: push tracked changes that are not yet ready to commit into stash stack </li>
+<li><code>list</code>: view the list of stash</li>
+<li><code>apply</code> / <code>apply stash{&lt;version-number&gt;}</code>: apply changes that you stashed into stack previously or some older version specified by <code>&lt;version-number&gt;</code></li>
+<li><code>apply --index</code>: only reapply staged changes. </li>
+<li><code>pop</code>: apply changes and pop the saved changes out from stash stack</li>
+</ul>
+<p>Actually there are some cases that you may make the changes in one branch and want those changes to take effect in another branch. <code>git stash</code> is a command for you. </p>
 <h3 id="Checking-local-status"><a href="#Checking-local-status" class="headerlink" title="Checking local status"></a>Checking local status</h3><p>This part is like GET request in HTTP perspective, it will not do any changes to the file status, it will only check status </p>
 <h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h4><h4 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h4><ul>
 <li>no arguments: see changes not yet staged</li>
@@ -91,9 +123,15 @@
 </ul>
 <h4 id="git-reset-this-could-be-a-dangerous-command-with-some-arguments-like-hard-since-you-probably-lose-your-work"><a href="#git-reset-this-could-be-a-dangerous-command-with-some-arguments-like-hard-since-you-probably-lose-your-work" class="headerlink" title="git reset (this could be a dangerous command with some arguments like --hard since you probably lose your work)"></a>git reset (this could be a dangerous command with some arguments like <code>--hard</code> since you probably lose your work)</h4><ul>
 <li><code>HEAD &lt;file-name&gt;</code>: unstage a staged file </li>
-<li></li>
+<li><code>--soft &lt;commit-hash&gt;</code>: change head pointer and put previous changes into staged area</li>
+<li><code>--mixed &lt;commit-hash&gt;</code>: the default mode, change head pointer and put previous changes into unstaged area</li>
+<li><code>--hard &lt;commit-hash&gt;</code>: change head pointer and remove all the uncommitted changes </li>
 </ul>
-<h4 id="git-revert"><a href="#git-revert" class="headerlink" title="git revert"></a>git revert</h4><h4 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
+<p>For <code>git reset</code> details, can refer to this <a href="https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard" target="_blank" rel="noopener">question</a> for further understanding. </p>
+<h4 id="git-revert"><a href="#git-revert" class="headerlink" title="git revert"></a>git revert</h4><ul>
+<li><code>&lt;commit-hash&gt;</code>: revert a commit and generate a commit about this reverting operation </li>
+</ul>
+<h4 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout"></a>git checkout</h4><ul>
 <li><code>-- &lt;file-name&gt; / &lt;file-name&gt;</code>: discard changes that you made to the file &lt;== could be dangerous</li>
 </ul>
 <h3 id="Work-with-remotes-Fetching-and-Uploading"><a href="#Work-with-remotes-Fetching-and-Uploading" class="headerlink" title="Work with remotes (Fetching and Uploading)"></a>Work with remotes (Fetching and Uploading)</h3><h4 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h4><ul>
@@ -172,8 +210,10 @@
 <p>If you got any questions, feel free to contact me via any communication tools </p>
 <p>Reference: </p>
 <ol>
-<li><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener">https://git-scm.com/book/en/v2</a></li>
-<li><a href="https://www.atlassian.com/git/tutorials" target="_blank" rel="noopener">https://www.atlassian.com/git/tutorials</a></li>
+<li><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener">Git book</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials" target="_blank" rel="noopener">Atlassian Git tutorial</a></li>
+<li><a href="https://git-scm.com/docs" target="_blank" rel="noopener">Git full reference</a></li>
+<li><a href="https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard" target="_blank" rel="noopener">Stackoverflow git reset question</a></li>
 </ol>
 ]]></content>
       <categories>

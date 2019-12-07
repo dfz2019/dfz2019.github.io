@@ -50,16 +50,16 @@
   };
 </script>
 
-  <meta name="description" content="Python is a versatile language that can support for multiple purposes.   scripting  web development  ML &#x2F; AI trackThere are I have seen too many tutorials about Python basics, most of them introduces">
-<meta name="keywords" content="Python, Java, Go">
+  <meta name="description" content="As all known, there are two versions of Python, Python 2 and Python 3. One suggestion: learn python 3.  Python is a versatile language that can support for multiple purposes.   scripting  web develop">
+<meta name="keywords" content="programming-language,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Intermediate Python">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;30&#x2F;intermediate-python&#x2F;index.html">
 <meta property="og:site_name" content="Dingfan&#39;s blog">
-<meta property="og:description" content="Python is a versatile language that can support for multiple purposes.   scripting  web development  ML &#x2F; AI trackThere are I have seen too many tutorials about Python basics, most of them introduces">
+<meta property="og:description" content="As all known, there are two versions of Python, Python 2 and Python 3. One suggestion: learn python 3.  Python is a versatile language that can support for multiple purposes.   scripting  web develop">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.postimg.cc&#x2F;vBzKnzhB&#x2F;python-logo.png">
-<meta property="og:updated_time" content="2019-12-01T16:50:31.978Z">
+<meta property="og:updated_time" content="2019-12-07T14:07:00.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.postimg.cc&#x2F;vBzKnzhB&#x2F;python-logo.png">
 
@@ -244,8 +244,19 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-02 00:50:31" itemprop="dateModified" datetime="2019-12-02T00:50:31+08:00">2019-12-02</time>
+                <time title="Modified: 2019-12-07 22:07:00" itemprop="dateModified" datetime="2019-12-07T22:07:00+08:00">2019-12-07</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming-language</span>
+                  </a>
+                </span>
+            </span>
 
           
 
@@ -259,6 +270,7 @@
 
       
         <p><img src="https://i.postimg.cc/vBzKnzhB/python-logo.png" alt="python-logo.png"></p>
+<p>As all known, there are two versions of Python, Python 2 and Python 3. One suggestion: learn python 3. </p>
 <p>Python is a versatile language that can support for multiple purposes. </p>
 <ol>
 <li>scripting </li>
@@ -271,15 +283,22 @@
 <ol>
 <li>Python basic </li>
 </ol>
-<p>general knowledge:<br>Python does minimum compile-time check, almost all the check is done in runtime check </p>
-<p>python encoding &amp; decoding </p>
-<p>regex introduction </p>
-<p>scripting track: requests + beautifulsoup + Pandas + Selenium(?)</p>
-<p>web development track: Django </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ol>
+<h2 id="general-knowledge"><a href="#general-knowledge" class="headerlink" title="general knowledge:"></a>general knowledge:</h2><p>Python does minimum compile-time check, almost all the check is done in runtime check </p>
+<p>python string is immutable, just like string in Java and C#. The reason that string type in Python is immutable is: </p>
+<ol>
+<li>it is safe to put as a dict key without deepcopy the content of string. If assign string to another variable then they do not point to the same object. </li>
+<li>it is threadsafe</li>
+<li>easy for programming, you can add mutable wrapper on immutable type but the reverse is difficult </li>
+</ol>
+<p>Every time we manipulate string, we actually construct new string with exactly the same value </p>
+<h3 id="python-encoding-amp-decoding"><a href="#python-encoding-amp-decoding" class="headerlink" title="python encoding &amp; decoding"></a>python encoding &amp; decoding</h3><p>converting between bytes and string, bytes to string ==&gt; decode, string to byte ==&gt; encode<br>To construct a python unicode string, add a prefix <code>u</code> in front of the string, like <code>u&#39;\xf1&#39;</code><br>If encode, then string becomes bytes with specific encoding method like <code>utf-8</code>. </p>
+<h3 id="python-list-tuple-dict-set"><a href="#python-list-tuple-dict-set" class="headerlink" title="python list, tuple, dict, set"></a>python list, tuple, dict, set</h3><h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p>list is passed by reference, use <code>=</code> does not copy the content of list, only copy the pointer to the object. <code>+</code> works as concatenation between lists. </p>
+<p>list comprehension is the most common pythonic implementation of <code>for</code> loop</p>
+<h3 id="regex-introduction"><a href="#regex-introduction" class="headerlink" title="regex introduction"></a>regex introduction</h3><h2 id="scripting-track-requests-beautifulsoup-Pandas-Selenium"><a href="#scripting-track-requests-beautifulsoup-Pandas-Selenium" class="headerlink" title="scripting track: requests + beautifulsoup + Pandas + Selenium(?)"></a>scripting track: requests + beautifulsoup + Pandas + Selenium(?)</h2><h2 id="web-development-track-Django"><a href="#web-development-track-Django" class="headerlink" title="web development track: Django"></a>web development track: Django</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ol>
 <li><a href="https://developers.google.com/edu/python/introduction" target="_blank" rel="noopener">Google Python Tutorials</a></li>
 <li><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a></li>
 <li><a href="https://docs.python.org/3/library/" target="_blank" rel="noopener">https://docs.python.org/3/library/</a></li>
+<li><a href="https://stackoverflow.com/questions/8680080/why-are-python-strings-immutable-best-practices-for-using-them" target="_blank" rel="noopener">https://stackoverflow.com/questions/8680080/why-are-python-strings-immutable-best-practices-for-using-them</a></li>
 </ol>
 
     </div>
@@ -289,6 +308,10 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/programming-language/" rel="tag"># programming-language</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
 
         
 
@@ -341,7 +364,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference:</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#general-knowledge"><span class="nav-number">1.</span> <span class="nav-text">general knowledge:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python-encoding-amp-decoding"><span class="nav-number">1.1.</span> <span class="nav-text">python encoding &amp; decoding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-list-tuple-dict-set"><span class="nav-number">1.2.</span> <span class="nav-text">python list, tuple, dict, set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#list"><span class="nav-number">1.2.1.</span> <span class="nav-text">list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#regex-introduction"><span class="nav-number">1.3.</span> <span class="nav-text">regex introduction</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scripting-track-requests-beautifulsoup-Pandas-Selenium"><span class="nav-number">2.</span> <span class="nav-text">scripting track: requests + beautifulsoup + Pandas + Selenium(?)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-development-track-Django"><span class="nav-number">3.</span> <span class="nav-text">web development track: Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -364,13 +387,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

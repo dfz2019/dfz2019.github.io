@@ -11,5 +11,3 @@ categories: daily
 下一篇blog，tech博主正式起航！
 
 2019.10.31
-
-最后夹带一点私货，anxl

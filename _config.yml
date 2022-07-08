@@ -23,10 +23,10 @@ timezone: Asia/Singapore
 
 title: Dingfan                         # the main title
 
-tagline: Hey bro, this is a serious description.  # it will display as the sub-title
+tagline: Talk is not cheap. <br> But still, I will show you the code.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Hey bro, this is a serious description.
+  Talk is not cheap. But still, I will show you the code.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://zhaodingfan.github.io/'

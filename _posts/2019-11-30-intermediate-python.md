@@ -2,8 +2,8 @@
 layout: post
 title: Intermediate Python
 date: 2019-11-30 17:19:36
-tags: [python, programming-language]
-categories: Dev
+tags: [python, django]
+categories: [programming-language, python]
 ---
 
 ![python-logo.png](https://i.postimg.cc/vBzKnzhB/python-logo.png)

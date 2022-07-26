@@ -2,8 +2,8 @@
 layout: post
 title: Git Cheatsheet
 date: 2019-11-12 00:58:27
-tags: [git, misc]
-categories: DevOps
+tags: [git]
+categories: dev-tool 
 ---
 
 ### 首篇blog献给我最最最喜欢的小梁！

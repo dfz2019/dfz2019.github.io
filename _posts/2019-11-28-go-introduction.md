@@ -2,11 +2,8 @@
 layout: post
 title: Let's Go
 date: 2019-11-28 21:12:36
-tags: 
-    - programming-language
-    - golang
-categories: 
-    - Dev
+categories: [programming-language, go]
+tags: [go]
 ---
 
 

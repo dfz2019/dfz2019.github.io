@@ -2,7 +2,7 @@
 layout: post
 title: "🆕Hello World"
 date: 2019-10-31 01:11:00 +0800
-categories: daily
+categories: daily-plan
 ---
 <pre>
 写在十月的最后一天

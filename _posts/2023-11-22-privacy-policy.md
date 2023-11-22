@@ -26,11 +26,11 @@ This privacy notice for Bedman ("**we**," "**us**," or "**our**"), describes how
 
   
 
-**_This summary provides key points from our privacy notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our_** [**_table of contents_**](#toc) **_below to find the section you are looking for._**
+**_This summary provides key points from our privacy notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our_** [**_table of contents_**](#table-of-contents) **_below to find the section you are looking for._**
 
   
 
-**What personal information do we process?** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about [personal information you disclose to us](#personalinfo).
+**What personal information do we process?** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about [personal information you disclose to us](#1-what-information-do-we-collect).
 
   
 
@@ -42,19 +42,19 @@ This privacy notice for Bedman ("**we**," "**us**," or "**our**"), describes how
 
   
 
-**How do we process your information?** We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about [how we process your information](#infouse).
+**How do we process your information?** We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about [how we process your information](#2-how-do-we-process-your-information).
 
   
 
-**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about [when and with whom we share your personal information](#whoshare).
+**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about [when and with whom we share your personal information](#4-when-and-with-whom-do-we-share-your-personal-information).
 
   
 
-**How do we keep your information safe?** We have organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Learn more about [how we keep your information safe](#infosafe).
+**How do we keep your information safe?** We have organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Learn more about [how we keep your information safe](#6-how-do-we-keep-your-information-safe).
 
   
 
-**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about [your privacy rights](#privacyrights).
+**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about [your privacy rights](#7-what-are-your-privacy-rights).
 
   
 
@@ -62,7 +62,7 @@ This privacy notice for Bedman ("**we**," "**us**," or "**our**"), describes how
 
   
 
-Want to learn more about what we do with any information we collect? [Review the privacy notice in full](#toc).
+Want to learn more about what we do with any information we collect? [Review the privacy notice in full](#table-of-contents).
 
   
 
@@ -72,35 +72,35 @@ Want to learn more about what we do with any information we collect? [Review th
 
   
 
-[1\. WHAT INFORMATION DO WE COLLECT?](#infocollect)
+[1\. WHAT INFORMATION DO WE COLLECT?](#1-what-information-do-we-collect)
 
-[2\. HOW DO WE PROCESS YOUR INFORMATION?](#infouse)
+[2\. HOW DO WE PROCESS YOUR INFORMATION?](#2-how-do-we-process-your-information)
 
-[3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?](#legalbases)
+[3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?](#3-what-legal-bases-do-we-rely-on-to-process-your-information)
 
-[4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#whoshare)
+[4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#4-when-and-with-whom-do-we-share-your-personal-information)
 
-[5\. HOW LONG DO WE KEEP YOUR INFORMATION?](#inforetain)
+[5\. HOW LONG DO WE KEEP YOUR INFORMATION?](#5-how-long-do-we-keep-your-information)
 
-[6\. HOW DO WE KEEP YOUR INFORMATION SAFE?](#infosafe)
+[6\. HOW DO WE KEEP YOUR INFORMATION SAFE?](#6-how-do-we-keep-your-information-safe)
 
-[7\. WHAT ARE YOUR PRIVACY RIGHTS?](#privacyrights)
+[7\. WHAT ARE YOUR PRIVACY RIGHTS?](#7-what-are-your-privacy-rights)
 
-[8\. CONTROLS FOR DO-NOT-TRACK FEATURES](#DNT)
+[8\. CONTROLS FOR DO-NOT-TRACK FEATURES](#8-controls-for-do-not-track-features)
 
-[9\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?](#uslaws)
+[9\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?](#9-do-united-states-residents-have-specific-privacy-rights)
 
-[10\. DO WE MAKE UPDATES TO THIS NOTICE?](#policyupdates)
+[10\. DO WE MAKE UPDATES TO THIS NOTICE?](#10-do-we-make-updates-to-this-notice)
 
-[11\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#contact)
+[11\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#11-how-can-you-contact-us-about-this-notice)
 
-[12\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?](#request)
-
-  
+[12\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?](#12-how-can-you-review-update-or-delete-the-data-we-collect-from-you)
 
   
 
-**1\. WHAT INFORMATION DO WE COLLECT?**
+  
+
+## 1\. WHAT INFORMATION DO WE COLLECT?
 
   
 
@@ -124,7 +124,7 @@ All personal information that you provide to us must be true, complete, and accu
 
   
 
-**2\. HOW DO WE PROCESS YOUR INFORMATION?**
+## 2\. HOW DO WE PROCESS YOUR INFORMATION?
 
   
 
@@ -138,7 +138,7 @@ All personal information that you provide to us must be true, complete, and accu
 
   
 
-**3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?**
+## 3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?**
 
   
 
@@ -195,7 +195,7 @@ In some exceptional cases, we may be legally permitted under applicable law to p
 
   
 
-**4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?**
+## 4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
 
   
 
@@ -209,7 +209,7 @@ We may need to share your personal information in the following situations:
 
   
 
-**5\. HOW LONG DO WE KEEP YOUR INFORMATION?**
+## 5\. HOW LONG DO WE KEEP YOUR INFORMATION?
 
   
 
@@ -225,7 +225,7 @@ When we have no ongoing legitimate business need to process your personal inform
 
   
 
-**6\. HOW DO WE KEEP YOUR INFORMATION SAFE?**
+## 6\. HOW DO WE KEEP YOUR INFORMATION SAFE?
 
   
 
@@ -237,7 +237,7 @@ We have implemented appropriate and reasonable technical and organizational secu
 
   
 
-**7\. WHAT ARE YOUR PRIVACY RIGHTS?**
+## 7\. WHAT ARE YOUR PRIVACY RIGHTS?
 
   
 
@@ -245,7 +245,7 @@ We have implemented appropriate and reasonable technical and organizational secu
 
   
 
-In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#contact)" below.
+In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#11-how-can-you-contact-us-about-this-notice)" below.
 
   
 
@@ -259,7 +259,9 @@ If you are located in Switzerland, you may contact the [Federal Data Protection 
 
   
 
-**Withdrawing your consent:** If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#contact)" below.
+### <a name="withdrawconsent">Withdrawing your consent: 
+
+If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#11-how-can-you-contact-us-about-this-notice)" below.
 
   
 
@@ -271,7 +273,7 @@ If you have questions or comments about your privacy rights, you may email us at
 
   
 
-**8\. CONTROLS FOR DO-NOT-TRACK FEATURES**
+## 8\. CONTROLS FOR DO-NOT-TRACK FEATURES
 
   
 
@@ -279,7 +281,7 @@ Most web browsers and some mobile operating systems and mobile applications incl
 
   
 
-**9\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?**
+## 9\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
 
   
 
@@ -437,7 +439,7 @@ We may also collect other personal information outside of these categories throu
 
   
 
-Learn about how we use your personal information in the section, "[HOW DO WE PROCESS YOUR INFORMATION?](#infouse)"
+Learn about how we use your personal information in the section, "[HOW DO WE PROCESS YOUR INFORMATION?](#2-how-do-we-process-your-information)"
 
   
 
@@ -445,7 +447,7 @@ Learn about how we use your personal information in the section, "[HOW DO WE PRO
 
   
 
-We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "[WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#whoshare)"
+We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "[WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#4-when-and-with-whom-do-we-share-your-personal-information)"
 
   
 
@@ -717,7 +719,7 @@ If we decline to take action regarding your request, we will inform you of our d
 
   
 
-**10\. DO WE MAKE UPDATES TO THIS NOTICE?**
+## 10\. DO WE MAKE UPDATES TO THIS NOTICE?
 
   
 
@@ -729,7 +731,7 @@ We may update this privacy notice from time to time. The updated version will be
 
   
 
-**11\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?**
+## 11\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
 
   
 
@@ -745,7 +747,7 @@ Bedman
 
   
 
-**12\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?**
+## 12\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
 
   
 
